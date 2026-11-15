@@ -291,8 +291,8 @@ button { font-family: inherit; color: inherit; }
     name: 'Aditi Singh',
     github: 'https://github.com/AditiSingh-08',
     linkedin: 'https://www.linkedin.com/in/aditi-singh-13686b24a/',
-    email: 'ad0308singh@gmail.com',      // add your professional email to show it in the contact section
-    resumeUrl: 'https://drive.google.com/file/d/1d1BZb8f05zXjrSHxibaFvK_h22plsCrx/view?usp=sharing'   // add a link to your resume PDF (Drive, Dropbox) to enable the download button
+    email: '',      // add your professional email to show it in the contact section
+    resumeUrl: 'https://drive.google.com/file/d/1d1BZb8f05zXjrSHxibaFvK_h22plsCrx/view?usp=sharing'
   };
 
   var SKILLS = [
@@ -567,7 +567,7 @@ button { font-family: inherit; color: inherit; }
                 <p>I'm a Computer Science graduate specializing in AI and Machine Learning, trained as a Graduate Engineer Trainee at LTIMindtree. I build practical software and intelligent applications, mostly in Python: backend services, data processing and retrieval-based AI systems.</p>
                 <div className="ctas">
                   <a className="btn dark" href="#projects">View projects</a>
-                  <a className="btn" href=${resumeHref} target=${ext ? '_blank' : undefined} rel=${ext ? 'noopener noreferrer' : undefined}>Download resume</a>
+                  <a className="btn" href=${resumeHref} target=${ext ? '_blank' : undefined} rel=${ext ? 'noopener noreferrer' : undefined}>${ext ? 'View resume' : 'Download resume'}</a>
                   <a className="btn" href="#contact">Contact me</a>
                 </div>
               </div>
@@ -793,10 +793,10 @@ button { font-family: inherit; color: inherit; }
         <div className="resume" id="resume">
           <div>
             <h3>Resume</h3>
-            <p>${PROFILE.resumeUrl ? 'One page, PDF.' : 'Available on request. Message me on LinkedIn and I will send the latest version.'}</p>
+            <p>${PROFILE.resumeUrl ? 'Latest version, opens in Google Drive.' : 'Available on request. Message me on LinkedIn and I will send the latest version.'}</p>
           </div>
           ${PROFILE.resumeUrl
-            ? html`<a className="btn dark" href=${PROFILE.resumeUrl} target="_blank" rel="noopener noreferrer">Download resume</a>`
+            ? html`<a className="btn dark" href=${PROFILE.resumeUrl} target="_blank" rel="noopener noreferrer">View resume</a>`
             : html`<a className="btn dark" href=${PROFILE.linkedin} target="_blank" rel="noopener noreferrer">Request my resume</a>`}
         </div>
       </div>
